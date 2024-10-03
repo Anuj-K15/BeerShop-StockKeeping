@@ -1,0 +1,22 @@
+<h2>Owner Dashboard</h2>
+<p>Welcome to the owner dashboard!</p>
+
+<h3>Sales Records</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Brand</th>
+            <th>Quantity</th>
+            <th>Date & Time</th> <!-- Added Date & Time column -->
+        </tr>
+    </thead>
+    <tbody>
+        <% sales.forEach(sale => { %>
+            <tr>
+                <td><%= sale.brand %></td>
+                <td><%= sale.quantity %></td>
+                <td><%= new Date(sale.date).toLocaleString() %></td> <!-- Display date and time -->
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
